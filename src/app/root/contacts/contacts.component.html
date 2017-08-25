@@ -1,0 +1,14 @@
+<div class="text-right" style="padding-bottom: 2em">
+    <button type="button" class="btn btn-default btn-md"  routerLink="/contact" routerLinkActive="active">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add
+    </button>
+</div>
+
+<ul class="list-group">
+  <li class="list-group-item justify-content-between" *ngFor="let contact of contactsCollection.toArray()">
+        <a href="" [routerLink]="['/contact', contact.id]" >{{contact.name}}</a> 
+        <span style="padding: 5em">{{contact.email}}</span>
+        <span>{{contact.phone}}</span>        
+        <span class="delete badge badge-default badge-pill" (click)="delete(contact, $event)">x</span>
+    </li>
+</ul>
