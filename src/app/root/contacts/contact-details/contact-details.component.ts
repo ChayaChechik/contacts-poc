@@ -33,19 +33,12 @@ import { OHttpCollection } from '../../../../modules/collections';
             );    
     }
     
-    id() : string{
-       return this
-           .activatedRoute
-           .snapshot
-           .paramMap
-           .get('id');
-    }
-    
-    load() : void{ 
+    load() : void{
         this
-            .oHttpCollection
-            .$get(this.id())
-            .subscribe(res => this.contact = res['_body']['data']);
+            .activatedRoute
+            .paramMap
+            .switchMap( (paramMap: ParamMap) => this.oHttpCollection.$get( paramMap.get('id')) )
+            .subscribe(res => this.contact = res['_body']['data']);   
     }
     
     save(event) : void{
@@ -66,6 +59,10 @@ import { OHttpCollection } from '../../../../modules/collections';
 
     back() : void{
         this.location.back();   
+    }
+    
+    id() : boolean{
+       return (!!this.activatedRoute.snapshot.paramMap.get('id'));
     }
     
     ngOnInit () : void{
