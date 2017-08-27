@@ -1,10 +1,12 @@
 <form class="navbar-form navbar-right">
     <div class="form-group">
         <div class="dropdown">
-            <input type="text" class="form-control" placeholder="Search" #searchBox id="search-box" (keyup)="search(searchBox.value)" (keydown)="setDisplay(true)" (blur)="setDisplay(false)">
+            <input type="text" class="form-control" placeholder="Search" #searchBox id="search-box" (keyup)="search(searchBox.value)" (keydown)="setDisplay(true)">
 
             <ul class="dropdown-menu" [ngClass]="{'display': validateDisplay()}" aria-labelledby="dropdownMenu4">
-                <li *ngFor="let contact of contactsCollection.toArray()"  ><a href="#" [routerLink]="['/contact', contact.id]">{{contact.name}}</a></li>
+                <li *ngFor="let contact of contactsCollection.toArray()">
+                    <a href="#" [routerLink]="['/contact', contact.id]">{{contact.name}}</a>
+                </li>
             </ul>
         </div>
     </div>

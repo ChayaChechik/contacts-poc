@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { Headers, Http, URLSearchParams  } from '@angular/http';
 
 import { Observable }        from 'rxjs/Observable';
@@ -12,7 +12,10 @@ import { OHttpCollection } from '../../../../modules/collections';
 @Component({
     selector: 'search',
     templateUrl: './search.component.html',
-    styleUrls:  ['./search.component.css']
+    styleUrls:  ['./search.component.css'],
+    host: {
+        '(document:click)': 'clickOut($event)',
+    }
 })
 
 export class SearchComponent implements OnInit {
@@ -23,7 +26,7 @@ export class SearchComponent implements OnInit {
     contactsCollection: OHttpCollection;
     display = false;
     
-    constructor(private http: Http) {
+    constructor(private elementRef: ElementRef, private http: Http) {
         this.contactsCollection = new OHttpCollection( 
                 'api/contacts',
                 this.http,
@@ -62,6 +65,13 @@ export class SearchComponent implements OnInit {
     validateDisplay() : boolean{
         return (this.contactsCollection.toArray().length > 0) && this.display;
     }
+    
+    //@TODO: convert to directive
+    clickOut(event): void {
+        if (!this.elementRef.nativeElement.contains(event.target))
+            this.setDisplay(false);
+    }
+
 
 }
 
