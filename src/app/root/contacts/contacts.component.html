@@ -6,9 +6,9 @@
 
 <ul class="list-group">
   <li class="list-group-item justify-content-between" *ngFor="let contact of contactsCollection.toArray()">
-        <a href="" [routerLink]="['/contact', contact.id]" >{{contact.name}}</a> 
-        <span style="padding: 5em">{{contact.email}}</span>
-        <span>{{contact.phone}}</span>        
+        <span class="info"><a href="" [routerLink]="['/contact', contact.id]">{{contact.name}}</a></span> 
+        <span class="info">{{contact.email}}</span>
+        <span class="info">{{contact.phone}}</span>        
         <span class="delete badge badge-default badge-pill" (click)="delete(contact, $event)">x</span>
     </li>
 </ul>
