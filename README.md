@@ -1,5 +1,5 @@
 # Contacts App 
-###### Proof of Concept
+###### *Proof of Concept*
 
 
 A simplified contacts application demonstrating SPA technologies. 
