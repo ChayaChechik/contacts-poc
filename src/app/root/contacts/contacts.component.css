@@ -1,5 +1,5 @@
 span.delete {
-    cursor: hand; 
+    cursor: pointer!important; 
 }
 
 ul li span.info{ 
