@@ -1,7 +1,8 @@
-# Contacts App [POC]
---------------------
+# Contacts App 
+######## Proof of Concept
 
-A simplified contacts application demonstrating SPA technologies.
+
+A simplified contacts application demonstrating SPA technologies. 
 
 ## Table of Contents
 
@@ -35,8 +36,9 @@ A simplified contacts application demonstrating SPA technologies.
 
 
 ## Development Roadmap 
+Legend:  [optional] ~~Done~~ 
 
- ### Features [optional]
+ ### Features 
  * ~~SPA structure~~
  * ~~Routing~~ 
  * ~~CRUD~~
@@ -53,7 +55,7 @@ A simplified contacts application demonstrating SPA technologies.
  * Search should not display results for an empty strings
  ### Improvements
  * Clickout functionality should be its own directive 
- * Details view should be in a popup
+ * [Details view should be in a popup]
  ### Tests
  * CRUD e2e test
  * Search component test
