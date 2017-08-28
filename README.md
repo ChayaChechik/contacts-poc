@@ -27,7 +27,7 @@ A simplified contacts application demonstrating SPA technologies.
 
 | Technology        | Options                           | Preference  | Reason                                                                   |Decision|Afterthought|
 | ----------------- |-----------------------------------|-------------| -------------------------------------------------------------------------|----------|----|
-| JS SPA framework  | Angular 1.6+, Angular 4+, React   | Angular 4+  | Light, Modular, Many tools for simple maintenance                        |Angular 4+|    | 
+| JS SPA framework  | Angular 1.6+, Angular 4+, React   | Angular 4+  | Light, Modular, Workflow automations                          |Angular 4+|    | 
 | JS 'Dialect'      | ES2015, ES2016, ES2017, TypeScript| ES2015      | Native ES, OOP enhancements, 98%+- support in evergreen browsers         |TypeScript|    |
 | Storage           | SQL, MongoDB, LocalStorage        | MongoDB     | Proper storage, Scalable, Data restructuring is simple, Fast kick start  |          |    |
 | Backend           | PHP, C#, Node                     | Node        | Fits well with rest of tech stack, No outstanding downsides              |          |    |
